@@ -3,9 +3,10 @@ import { useDispatch } from 'react-redux';
 import BeatLoader from 'react-spinners/BeatLoader';
 import PropTypes from 'prop-types';
 import { WrapName } from './ContactListItem.styled';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import { Button, ButtonGroup } from '@chakra-ui/react';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -29,9 +30,18 @@ export function ContactListItem({ id, name, number }) {
         <p>name: {name} </p>
         <p>number: {number} </p>
       </WrapName>
-      <DeleteBtn onClick={handleDeleteContact} disabled={isBtnSpiner}>
+      {/* <DeleteBtn onClick={handleDeleteContact} disabled={isBtnSpiner}>
         {isBtnSpiner ? btnSpiner : 'Delete'}
-      </DeleteBtn>
+      </DeleteBtn> */}
+      <Button
+        size="sm"
+        colorScheme="teal"
+        variant="outline"
+        onClick={handleDeleteContact}
+        disabled={isBtnSpiner}
+      >
+        {isBtnSpiner ? btnSpiner : 'Delete'}
+      </Button>
     </>
   );
 }

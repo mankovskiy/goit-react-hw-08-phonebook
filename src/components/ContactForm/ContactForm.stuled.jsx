@@ -17,6 +17,11 @@ export const AddBtn = styled.button`
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: solid 1px;
+  border-radius: 5px;
 `;
 
-export const Input = styled.input``;
+export const Input = styled.input`
+  border: solid 1px;
+  border-radius: 5px;
+`;
