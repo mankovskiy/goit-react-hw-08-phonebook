@@ -1,4 +1,4 @@
-import { DeleteBtn } from './ContactListItem.styled';
+// import { DeleteBtn } from './ContactListItem.styled';
 import { useDispatch } from 'react-redux';
 import BeatLoader from 'react-spinners/BeatLoader';
 import PropTypes from 'prop-types';
@@ -6,7 +6,7 @@ import { WrapName } from './ContactListItem.styled';
 import { deleteContact } from 'redux/contacts/operations';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-import { Button, ButtonGroup } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 
 import 'react-toastify/dist/ReactToastify.css';
 
