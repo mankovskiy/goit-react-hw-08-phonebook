@@ -1,5 +1,5 @@
-import { Flex, Spacer, ButtonGroup, Button } from '@chakra-ui/react';
-import { Box } from './Box/Box';
+import { Flex, ButtonGroup, Button } from '@chakra-ui/react';
+// import { Box } from './Box/Box';
 import { Link } from 'react-router-dom';
 
 export const Navigation = () => {

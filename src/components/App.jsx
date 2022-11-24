@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 // import {
 //   Flex,
 //   Spacer,
@@ -10,12 +10,12 @@ import { ToastContainer, toast } from 'react-toastify';
 //   Button,
 //   Container,
 // } from '@chakra-ui/react';
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactList } from './ContactList/ContactList';
-import { selectError } from 'redux/contacts/selectors';
+// import { ContactForm } from './ContactForm/ContactForm';
+// import { ContactList } from './ContactList/ContactList';
+// import { selectError } from 'redux/contacts/selectors';
 import { fetchContacts } from 'redux/contacts/operations';
-import { Filter } from './Filter/Filter';
-import { Box } from './Box/Box';
+// import { Filter } from './Filter/Filter';
+// import { Box } from './Box/Box';
 import { Contacts } from 'pages/Contacts';
 import { Login } from 'pages/Login';
 import { Register } from 'pages/Register';
@@ -24,7 +24,7 @@ import { Layout } from './Layout';
 
 export function App() {
   const dispatch = useDispatch();
-  const error = useSelector(selectError);
+  // const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchContacts());
