@@ -37,9 +37,10 @@ export const contactsSlice = createSlice({
       if (
         state.contacts.items.some(cont => cont.name === action.payload.name)
       ) {
-        toast.warn('Contact alredy exist');
+        alert('Contact alredy exist');
+        return;
       } else {
-        toast.info(`'Add new contact' ${action.payload.name}`);
+        alert(`'Add new contact' ${action.payload.name}`);
       }
       state.contacts.items.push(action.payload);
     },

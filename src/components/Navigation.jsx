@@ -1,8 +1,12 @@
 import { Flex, ButtonGroup, Button } from '@chakra-ui/react';
 // import { Box } from './Box/Box';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from 'redux/auth/selectors';
 
 export const Navigation = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
     <nav>
       <Flex minWidth="max-content" alignItems="center" gap="2">
@@ -14,21 +18,13 @@ export const Navigation = () => {
           <Button colorScheme="teal" size="sm">
             <Link to="/">Home page</Link>
           </Button>
-          <Button colorScheme="teal" size="sm">
-            <Link to="/contacts">Contacts</Link>
-          </Button>
+          {isLoggedIn && (
+            <Button colorScheme="teal" size="sm">
+              <Link to="/contacts">Contacts</Link>
+            </Button>
+          )}
         </ButtonGroup>
       </Flex>
     </nav>
   );
 };
-
-// export const Navigation = () => {
-//   return (
-//     <nav>
-//       <NavLink to="/">Home</NavLink>
-//       <NavLink to="/tasks">Tasks</NavLink>
-//       )}
-//     </nav>
-//   );
-// };

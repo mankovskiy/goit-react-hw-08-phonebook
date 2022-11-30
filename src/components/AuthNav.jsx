@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 export const AuthNav = () => {
   return (
     <>
-      <Flex minWidth="max-content" alignItems="center" gap="2">
+      <Flex alignItems="center">
         {/* <Box p="2"> */}
         {/* <Link to="/">Home page</Link> */}
         {/* </Box> */}
         <Spacer />
-        <ButtonGroup gap="2">
+        <ButtonGroup gap="3">
           <Button colorScheme="teal" size="sm">
             <Link to="/register">Sign Up</Link>
           </Button>

@@ -28,10 +28,10 @@ export const ContactList = () => {
         </p>
       )}
       <ul>
-        {filterContacts.map(({ id, name, phone }) => {
+        {filterContacts.map(({ id, name, number }) => {
           return (
             <List key={id}>
-              <ContactListItem id={id} name={name} number={phone} />
+              <ContactListItem id={id} name={name} number={number} />
             </List>
           );
         })}
