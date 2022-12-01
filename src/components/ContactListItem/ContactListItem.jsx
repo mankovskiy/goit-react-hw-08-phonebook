@@ -30,9 +30,7 @@ export function ContactListItem({ id, name, number }) {
         <p>name: {name} </p>
         <p>number: {number} </p>
       </WrapName>
-      {/* <DeleteBtn onClick={handleDeleteContact} disabled={isBtnSpiner}>
-        {isBtnSpiner ? btnSpiner : 'Delete'}
-      </DeleteBtn> */}
+
       <Button
         size="sm"
         colorScheme="teal"

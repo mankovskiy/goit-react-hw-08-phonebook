@@ -5,7 +5,7 @@ import {
   deleteContact,
   setFilterValue,
 } from './operations';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 const contactInitialState = {
   contacts: { items: [], isLoading: false, error: null },
@@ -34,14 +34,14 @@ export const contactsSlice = createSlice({
     [addContact.fulfilled](state, action) {
       state.contacts.isLoading = false;
       state.contacts.error = null;
-      if (
-        state.contacts.items.some(cont => cont.name === action.payload.name)
-      ) {
-        alert('Contact alredy exist');
-        return;
-      } else {
-        alert(`'Add new contact' ${action.payload.name}`);
-      }
+      // if (
+      //   state.contacts.items.some(cont => cont.name === action.payload.name)
+      // ) {
+      //   alert('Contact alredy exist');
+      //   return;
+      // } else {
+      //   alert(`'Add new contact' ${action.payload.name}`);
+      // }
       state.contacts.items.push(action.payload);
     },
 
