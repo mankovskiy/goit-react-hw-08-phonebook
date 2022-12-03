@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from 'redux/auth/selectors';
 import { logOut } from 'redux/auth/operations';
+import { Flex, Text, Button } from '@chakra-ui/react';
 
 export const UserMenu = () => {
   const user = useSelector(selectUser);
@@ -12,11 +13,19 @@ export const UserMenu = () => {
   };
 
   return (
-    <>
-      <p>Welcome, {user.name} </p>
-      <button onClick={handleLogOut} type="button">
+    <Flex alignItems="center">
+      <Text fontSize="xl" color="yellow" as="p" mr={5}>
+        Welcome, {user.name}
+      </Text>
+      <Button
+        onClick={handleLogOut}
+        type="button"
+        colorScheme="transperense"
+        size="sm"
+        // variant="outline"
+      >
         Logout
-      </button>
-    </>
+      </Button>
+    </Flex>
   );
 };

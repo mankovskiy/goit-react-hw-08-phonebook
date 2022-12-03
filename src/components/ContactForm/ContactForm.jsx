@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Form } from './ContactForm.stuled';
-import { AddBtn } from './ContactForm.stuled';
-import { Input } from './ContactForm.stuled';
+// import { Form } from './ContactForm.stuled';
+// import { AddBtn } from './ContactForm.stuled';
+// import { Input } from './ContactForm.stuled';
+import { Input, FormControl, FormLabel, Button } from '@chakra-ui/react';
 import { addContact } from 'redux/contacts/operations';
 
 import 'react-toastify/dist/ReactToastify.css';
 
 import PropTypes from 'prop-types';
 
-import { ContactFormLabel } from './ContactForm.stuled';
+// import { ContactFormLabel } from './ContactForm.stuled';
 
 export function ContactForm() {
   const [name, setName] = useState('');
@@ -38,9 +39,13 @@ export function ContactForm() {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <ContactFormLabel>Name</ContactFormLabel>
+    <FormControl as="form" onSubmit={handleSubmit}>
+      <FormLabel>Name</FormLabel>
       <Input
+        mb={10}
+        size="sm"
+        variant="filled"
+        placeholder="Name"
         onChange={handleChangeInput}
         type="text"
         name="name"
@@ -49,8 +54,11 @@ export function ContactForm() {
         required
         value={name}
       />
-      <ContactFormLabel>Number</ContactFormLabel>
+      <FormLabel>Number</FormLabel>
       <Input
+        size="sm"
+        variant="filled"
+        placeholder="Number"
         onChange={handleChangeInput}
         type="tel"
         name="number"
@@ -59,10 +67,20 @@ export function ContactForm() {
         required
         value={number}
       />
-      <AddBtn type="submit" disabled={name === '' || (number === '' && true)}>
+      <Button
+        // textAlign="center"
+        justifyItems="center"
+        mt={10}
+        mb={10}
+        display="flex"
+        type="submit"
+        colorScheme="teal"
+        size="sm"
+        disabled={name === '' || (number === '' && true)}
+      >
         add contact
-      </AddBtn>
-    </Form>
+      </Button>
+    </FormControl>
   );
 }
 

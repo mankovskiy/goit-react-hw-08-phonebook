@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { Box } from '@chakra-ui/react';
 
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
@@ -13,10 +14,14 @@ export const Contacts = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <>
-      <ContactForm />
-      <Filter />
-      <ContactList />
-    </>
+    <Box display="flex" gap={300} justifyContent="center" mt={20}>
+      <Box w={320}>
+        <ContactForm />
+      </Box>
+      <Box>
+        <Filter />
+        <ContactList />
+      </Box>
+    </Box>
   );
 };

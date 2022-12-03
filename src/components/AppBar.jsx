@@ -8,9 +8,17 @@ import { selectIsLoggedIn } from 'redux/auth/selectors';
 export const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
-    <Flex as="header" mt={5} justifyContent="space-between">
-      <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
-    </Flex>
+    <>
+      <Flex
+        as="header"
+        pt={5}
+        pb={5}
+        alignContent="center"
+        justifyContent="space-between"
+      >
+        <Navigation />
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      </Flex>
+    </>
   );
 };

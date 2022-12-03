@@ -9,17 +9,17 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <Flex minWidth="max-content" alignItems="center" gap="2">
+      <Flex minWidth="max-content" gap="2">
         {/* <Box p="2"> */}
         {/* <Link to="/">Home page</Link> */}
         {/* </Box> */}
         {/* <Spacer /> */}
         <ButtonGroup gap="2">
-          <Button colorScheme="teal" size="sm">
+          <Button colorScheme="transperense" size="sm">
             <Link to="/">Home page</Link>
           </Button>
           {isLoggedIn && (
-            <Button colorScheme="teal" size="sm">
+            <Button colorScheme="transperense" size="sm">
               <Link to="/contacts">Contacts</Link>
             </Button>
           )}

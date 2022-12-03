@@ -24,24 +24,18 @@ export const RegisterForm = () => {
       as="form"
       onSubmit={handleSubmit}
       autoComplete="off"
-      mt={10}
+      mt={-20}
       w={320}
     >
-      <FormLabel display="flex" mb={10} flexDirection="column">
+      <FormLabel mb={10}>
         Username
-        <Input
-          type="text"
-          name="name"
-          size="sm"
-          variant="filled"
-          //   focusBorderColor="errorBorderColor"
-        />
+        <Input type="text" name="name" size="sm" variant="filled" />
       </FormLabel>
-      <FormLabel display="flex" mb={10} flexDirection="column">
+      <FormLabel mb={10}>
         Email
         <Input type="email" name="email" size="sm" variant="filled" />
       </FormLabel>
-      <FormLabel ldisplay="flex" mb={10} flexDirection="column">
+      <FormLabel mb={10}>
         Password
         <Input type="password" name="password" size="sm" variant="filled" />
       </FormLabel>

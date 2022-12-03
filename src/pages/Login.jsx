@@ -1,5 +1,11 @@
 import { useDispatch } from 'react-redux';
-import { FormControl, FormLabel, Button, Input } from '@chakra-ui/react';
+import {
+  FormControl,
+  FormLabel,
+  Button,
+  Input,
+  Center,
+} from '@chakra-ui/react';
 import { login } from 'redux/auth/operations';
 
 export const Login = () => {
@@ -18,25 +24,27 @@ export const Login = () => {
   };
 
   return (
-    <FormControl
-      as="form"
-      onSubmit={handleLogin}
-      autoComplete="off"
-      mt={10}
-      w={320}
-    >
-      <FormLabel display="flex" mb={10} flexDirection="column">
-        Email
-        <Input type="email" name="email" size="sm" variant="filled" />
-      </FormLabel>
-      <FormLabel ldisplay="flex" mb={10} flexDirection="column">
-        Password
-        <Input type="password" name="password" size="sm" variant="filled" />
-      </FormLabel>
+    <Center h="45vw">
+      <FormControl
+        as="form"
+        onSubmit={handleLogin}
+        autoComplete="off"
+        mt={-20}
+        w={320}
+      >
+        <FormLabel display="flex" mb={10} flexDirection="column">
+          Email
+          <Input type="email" name="email" size="sm" variant="filled" />
+        </FormLabel>
+        <FormLabel ldisplay="flex" mb={10} flexDirection="column">
+          Password
+          <Input type="password" name="password" size="sm" variant="filled" />
+        </FormLabel>
 
-      <Button type="submit" colorScheme="teal" size="sm">
-        Send
-      </Button>
-    </FormControl>
+        <Button type="submit" colorScheme="teal" size="sm">
+          Send
+        </Button>
+      </FormControl>
+    </Center>
   );
 };

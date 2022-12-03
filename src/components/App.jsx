@@ -10,6 +10,7 @@ import { Layout } from './Layout';
 import { selectIsRefreshing } from 'redux/auth/selectors';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+import { Box } from '@chakra-ui/react';
 
 const Home = lazy(() =>
   import('../pages/Home').then(module => ({
@@ -43,24 +44,28 @@ export function App() {
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route
-          path="register"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={Register} />
-          }
-        />
-        <Route
-          path="login"
-          element={<RestrictedRoute redirectTo="/contacts" component={Login} />}
-        />
-        <Route
-          path="contacts"
-          element={<PrivateRoute redirectTo="/login" component={Contacts} />}
-        />
-      </Route>
-    </Routes>
+    <Box backgroundColor="#819cff">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route
+            path="register"
+            element={
+              <RestrictedRoute redirectTo="/contacts" component={Register} />
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <RestrictedRoute redirectTo="/contacts" component={Login} />
+            }
+          />
+          <Route
+            path="contacts"
+            element={<PrivateRoute redirectTo="/login" component={Contacts} />}
+          />
+        </Route>
+      </Routes>
+    </Box>
   );
 }
