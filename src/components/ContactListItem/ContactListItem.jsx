@@ -1,9 +1,9 @@
 // import { DeleteBtn } from './ContactListItem.styled';
 import { useDispatch } from 'react-redux';
-import BeatLoader from 'react-spinners/BeatLoader';
+// import BeatLoader from 'react-spinners/BeatLoader';
 import PropTypes from 'prop-types';
 import { deleteContact } from 'redux/contacts/operations';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { Divider, Stack, Text, Button, Box } from '@chakra-ui/react';
 import { DeleteIcon } from '@chakra-ui/icons';
@@ -11,12 +11,12 @@ import { DeleteIcon } from '@chakra-ui/icons';
 import 'react-toastify/dist/ReactToastify.css';
 
 export function ContactListItem({ id, name, number }) {
-  const [isBtnSpiner, setIsBtnSpiner] = useState(false);
+  // const [isBtnSpiner, setIsBtnSpiner] = useState(false);
   const dispatch = useDispatch();
 
   const handleDeleteContact = () => {
     dispatch(deleteContact(id));
-    setIsBtnSpiner(true);
+    // setIsBtnSpiner(true);
     toast.info(`'Delete contact: ${name} !'`);
   };
 
