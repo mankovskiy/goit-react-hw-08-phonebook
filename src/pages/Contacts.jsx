@@ -14,13 +14,24 @@ export const Contacts = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <Box display="flex" gap={300} justifyContent="center" mt={20}>
+    <Box display="flex" gap={300} justifyContent="center" mt={20} pb="40vw">
       <Box w={320}>
         <ContactForm />
       </Box>
       <Box>
         <Filter />
-        <ContactList />
+        <Box
+          backgroundColor="#EDF2F5"
+          overflow="auto"
+          w={320}
+          h={320}
+          minH="32px"
+          p={[2, 2, 16, 2]}
+          mt={6}
+          borderRadius="xl"
+        >
+          <ContactList />
+        </Box>
       </Box>
     </Box>
   );

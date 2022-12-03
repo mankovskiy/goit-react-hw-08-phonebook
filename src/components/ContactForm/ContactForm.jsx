@@ -42,6 +42,7 @@ export function ContactForm() {
     <FormControl as="form" onSubmit={handleSubmit}>
       <FormLabel>Name</FormLabel>
       <Input
+        borderRadius="xl"
         mb={10}
         size="sm"
         variant="filled"
@@ -56,6 +57,7 @@ export function ContactForm() {
       />
       <FormLabel>Number</FormLabel>
       <Input
+        borderRadius="xl"
         size="sm"
         variant="filled"
         placeholder="Number"

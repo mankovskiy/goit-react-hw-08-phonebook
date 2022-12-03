@@ -7,5 +7,5 @@ export const DeleteBtn = styled.button`
 
 export const WrapName = styled.div`
   /* margin-top: 10px; */
-  display: flex;
+  display: inline-block;
 `;

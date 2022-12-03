@@ -14,6 +14,8 @@ export const Filter = () => {
     <Box>
       <FormLabel>Find contacts by name</FormLabel>
       <Input
+        mb="40px"
+        borderRadius="xl"
         w={320}
         type="text"
         placeholder="Search name"

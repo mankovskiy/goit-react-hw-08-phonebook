@@ -1,10 +1,10 @@
-import { Center, Text } from '@chakra-ui/react';
+import { Center, Heading } from '@chakra-ui/react';
 
 export const Home = () => {
   return (
     <Center h="45vw">
-      <Text
-        as="p"
+      <Heading
+        as="h1"
         bgGradient="linear(to-l, #3a3fdc, #dbee33)"
         bgClip="text"
         fontSize="6xl"
@@ -12,7 +12,7 @@ export const Home = () => {
         mt={-20}
       >
         PHONEBOOK
-      </Text>
+      </Heading>
     </Center>
   );
 };

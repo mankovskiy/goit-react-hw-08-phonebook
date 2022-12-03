@@ -2,11 +2,11 @@
 import { useDispatch } from 'react-redux';
 import BeatLoader from 'react-spinners/BeatLoader';
 import PropTypes from 'prop-types';
-import { WrapName } from './ContactListItem.styled';
 import { deleteContact } from 'redux/contacts/operations';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-import { Button } from '@chakra-ui/react';
+import { Divider, Stack, Text, Button, Box } from '@chakra-ui/react';
+import { DeleteIcon } from '@chakra-ui/icons';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -20,27 +20,32 @@ export function ContactListItem({ id, name, number }) {
     toast.info(`'Delete contact: ${name} !'`);
   };
 
-  const btnSpiner = (
-    <BeatLoader color="#787e7d" size={5} speedMultiplier={1} margin={3} />
-  );
+  // const btnSpiner = (
+  //   <BeatLoader color="#787e7d" size={5} speedMultiplier={1} margin={3} />
+  // );
 
   return (
-    <>
-      <WrapName>
-        <p>name: {name} </p>
-        <p>number: {number} </p>
-      </WrapName>
-
+    <Box display="flex" justifyContent="space-between" alignItems="center">
+      <Stack align="stretch">
+        <Text fontSize="sm">Name: {name}</Text>
+        <Text fontSize="sm">Number: {number}</Text>
+        <Divider w="280px" borderColor="teal.300" mt={0} />
+      </Stack>
       <Button
+        display="flex"
+        ml={-10}
         size="sm"
         colorScheme="teal"
+        border="transparent"
+        aria-label="Delete contact"
         variant="outline"
         onClick={handleDeleteContact}
-        disabled={isBtnSpiner}
+        // disabled={isBtnSpiner}
       >
-        {isBtnSpiner ? btnSpiner : 'Delete'}
+        <DeleteIcon />
       </Button>
-    </>
+      {/* {isBtnSpiner ? btnSpiner : 'Delete'} */}
+    </Box>
   );
 }
 

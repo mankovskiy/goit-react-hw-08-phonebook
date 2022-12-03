@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { ContactListItem } from '../ContactListItem/ContactListItem';
-import { List } from './ContactList.styled';
+// import { List } from './ContactList.styled';
+
 import {
   selectContacts,
   selectFilter,
   selectError,
 } from 'redux/contacts/selectors';
+import { Text, ListItem, List } from '@chakra-ui/react';
 
 export const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -23,19 +25,17 @@ export const ContactList = () => {
   ) : (
     <>
       {contacts.length === 0 && (
-        <p>
-          <b>Contact list is empty</b>
-        </p>
+        <Text fontSize="lg">Contact list is empty</Text>
       )}
-      <ul>
+      <List>
         {filterContacts.map(({ id, name, number }) => {
           return (
-            <List key={id}>
+            <ListItem key={id}>
               <ContactListItem id={id} name={name} number={number} />
-            </List>
+            </ListItem>
           );
         })}
-      </ul>
+      </List>
     </>
   );
 };
