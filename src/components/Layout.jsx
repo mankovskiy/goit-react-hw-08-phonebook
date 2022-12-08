@@ -9,9 +9,9 @@ export const Layout = () => {
     <>
       <Container maxW="container.xxl">
         <AppBar />
-      </Container>
-      <Divider colorScheme="yellow" />
-      <Container maxW="container.xxl">
+
+        <Divider />
+
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>

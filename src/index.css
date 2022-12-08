@@ -1,7 +1,7 @@
-@import-normalize; /* bring in normalize.css styles */
+/* @import 'node_modules/modern-normalize/modern-normalize.css';
 
 body {
-  /* background-color: #819cff; */
+  background-color: #819cff;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -30,4 +30,4 @@ li {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */

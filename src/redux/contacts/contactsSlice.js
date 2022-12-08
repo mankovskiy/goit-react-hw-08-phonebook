@@ -5,7 +5,10 @@ import {
   deleteContact,
   setFilterValue,
 } from './operations';
-// import { toast } from 'react-toastify';
+
+import { createStandaloneToast } from '@chakra-ui/toast';
+
+const { toast } = createStandaloneToast();
 
 const contactInitialState = {
   contacts: { items: [], isLoading: false, error: null },
@@ -34,14 +37,25 @@ export const contactsSlice = createSlice({
     [addContact.fulfilled](state, action) {
       state.contacts.isLoading = false;
       state.contacts.error = null;
-      // if (
-      //   state.contacts.items.some(cont => cont.name === action.payload.name)
-      // ) {
-      //   alert('Contact alredy exist');
-      //   return;
-      // } else {
-      //   alert(`'Add new contact' ${action.payload.name}`);
-      // }
+      if (
+        state.contacts.items.some(cont => cont.name === action.payload.name)
+      ) {
+        toast({
+          title: 'Contact alredy exist',
+          position: 'top-right',
+          status: 'warning',
+          isClosable: true,
+        });
+
+        return;
+      } else {
+        toast({
+          title: `${action.payload.name}, add to contacts`,
+          position: 'top-right',
+          status: 'success',
+          isClosable: true,
+        });
+      }
       state.contacts.items.push(action.payload);
     },
 
@@ -51,6 +65,12 @@ export const contactsSlice = createSlice({
       state.contacts.items = state.contacts.items.filter(
         contact => contact.id !== action.payload.id
       );
+      toast({
+        title: `Сontact ${action.payload.name} has been deleted `,
+        position: 'top-right',
+        status: 'success',
+        isClosable: true,
+      });
     },
     [deleteContact.rejected](state, action) {
       state.contacts.isLoading = false;

@@ -1,18 +1,23 @@
-import { Center, Heading } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 
 export const Home = () => {
   return (
-    <Center h="45vw">
+    <Box
+      display="flex"
+      justifyContent="center"
+      // alignItems="center"
+      margin="auto"
+    >
       <Heading
         as="h1"
         bgGradient="linear(to-l, #3a3fdc, #dbee33)"
         bgClip="text"
         fontSize="6xl"
         fontWeight="extrabold"
-        mt={-20}
+        mt={60}
       >
         PHONEBOOK
       </Heading>
-    </Center>
+    </Box>
   );
 };

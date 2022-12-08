@@ -35,7 +35,8 @@ export function ContactListItem({ id, name, number }) {
         display="flex"
         ml={-10}
         size="sm"
-        colorScheme="teal"
+        // colorScheme="teal"
+        color="btnColor"
         border="transparent"
         aria-label="Delete contact"
         variant="outline"

@@ -14,7 +14,7 @@ export const Contacts = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <Box display="flex" gap={300} justifyContent="center" mt={20} pb="40vw">
+    <Box display="flex" gap={300} justifyContent="center" mt={20}>
       <Box w={320}>
         <ContactForm />
       </Box>

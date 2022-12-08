@@ -1,16 +1,12 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { Form } from './ContactForm.stuled';
-// import { AddBtn } from './ContactForm.stuled';
-// import { Input } from './ContactForm.stuled';
+
 import { Input, FormControl, FormLabel, Button } from '@chakra-ui/react';
 import { addContact } from 'redux/contacts/operations';
 
 import 'react-toastify/dist/ReactToastify.css';
 
 import PropTypes from 'prop-types';
-
-// import { ContactFormLabel } from './ContactForm.stuled';
 
 export function ContactForm() {
   const [name, setName] = useState('');
@@ -76,7 +72,8 @@ export function ContactForm() {
         mb={10}
         display="flex"
         type="submit"
-        colorScheme="teal"
+        // colorScheme="teal"
+        bg="btnColor"
         size="sm"
         disabled={name === '' || (number === '' && true)}
       >
