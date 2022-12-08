@@ -41,7 +41,7 @@ export const Login = () => {
           <Input type="password" name="password" size="sm" variant="filled" />
         </FormLabel>
 
-        <Button type="submit" colorScheme="teal" size="sm">
+        <Button type="submit" bg="btnColor" color="white" size="sm">
           Send
         </Button>
       </FormControl>
