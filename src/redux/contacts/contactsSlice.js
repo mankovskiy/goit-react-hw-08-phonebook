@@ -42,7 +42,7 @@ export const contactsSlice = createSlice({
       ) {
         toast({
           title: 'Contact alredy exist',
-          position: 'top-right',
+          position: 'top',
           status: 'warning',
           isClosable: true,
         });
@@ -51,7 +51,7 @@ export const contactsSlice = createSlice({
       } else {
         toast({
           title: `${action.payload.name}, add to contacts`,
-          position: 'top-right',
+          position: 'top',
           status: 'success',
           isClosable: true,
         });
@@ -67,7 +67,7 @@ export const contactsSlice = createSlice({
       );
       toast({
         title: `Сontact ${action.payload.name} has been deleted `,
-        position: 'top-right',
+        position: 'top',
         status: 'success',
         isClosable: true,
       });

@@ -14,17 +14,17 @@ export const UserMenu = () => {
 
   return (
     <Flex alignItems="center">
-      <Text fontSize="xl" color="yellow" as="p" mr={5}>
+      <Text fontSize="xl" as="p" mr={5}>
         Welcome, {user.name}
       </Text>
       <Button
+        colorScheme="BlackAlpha 700"
         onClick={handleLogOut}
         type="button"
-        colorScheme="transperense"
-        size="sm"
-        // variant="outline"
+        variant="link"
+        size="m"
       >
-        Logout
+        LogOut
       </Button>
     </Flex>
   );

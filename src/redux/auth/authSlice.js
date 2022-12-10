@@ -23,7 +23,7 @@ const authSlice = createSlice({
         title: 'Account created.',
         description: `${action.payload.user.name} we've created your account for you.`,
         status: 'success',
-        position: 'top-right',
+        position: 'top',
         duration: 5000,
         isClosable: true,
       });
@@ -34,7 +34,7 @@ const authSlice = createSlice({
       state.isLoggedIn = true;
       toast({
         title: `${action.payload.user.name} logged in`,
-        position: 'top-right',
+        position: 'top',
         status: 'success',
         isClosable: true,
       });
@@ -45,7 +45,7 @@ const authSlice = createSlice({
       state.isLoggedIn = false;
       toast({
         title: 'logged out',
-        position: 'top-right',
+        position: 'top',
         status: 'success',
         isClosable: true,
       });

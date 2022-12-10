@@ -3,28 +3,25 @@ import { Flex, ButtonGroup, Button } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-
+import { ColorModeSwitcher } from './ColorModeSwitcher/ColorModeSwitcher';
 export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <nav>
-      <Flex minWidth="max-content" gap="2">
-        {/* <Box p="2"> */}
-        {/* <Link to="/">Home page</Link> */}
-        {/* </Box> */}
-        {/* <Spacer /> */}
-        <ButtonGroup gap="2">
-          <Button colorScheme="transperense" size="sm">
+    <>
+      <Flex as="nav" gap="2">
+        <ButtonGroup gap="4">
+          <Button colorScheme="BlackAlpha 700" variant="link" size="m">
             <Link to="/">Home page</Link>
           </Button>
           {isLoggedIn && (
-            <Button colorScheme="transperense" size="sm">
+            <Button colorScheme="BlackAlpha 700" variant="link" size="m">
               <Link to="/contacts">Contacts</Link>
             </Button>
           )}
+          <ColorModeSwitcher />
         </ButtonGroup>
       </Flex>
-    </nav>
+    </>
   );
 };

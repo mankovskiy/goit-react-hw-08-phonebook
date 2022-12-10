@@ -4,7 +4,7 @@ import { AuthNav } from './AuthNav';
 import { Navigation } from './Navigation';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-
+// import { ColorModeSwitcher } from './ColorModeSwitcher/ColorModeSwitcher';
 export const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
@@ -17,6 +17,7 @@ export const AppBar = () => {
         justifyContent="space-between"
       >
         <Navigation />
+        {/* <ColorModeSwitcher /> */}
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </Flex>
     </>

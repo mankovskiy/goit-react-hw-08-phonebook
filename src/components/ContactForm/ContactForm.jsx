@@ -73,9 +73,9 @@ export function ContactForm() {
         display="flex"
         type="submit"
         // colorScheme="teal"
-        bg="btnColor"
+        // bg="btnColor"
         size="sm"
-        disabled={name === '' || (number === '' && true)}
+        // disabled={name === '' || (number === '' && true)}
       >
         add contact
       </Button>

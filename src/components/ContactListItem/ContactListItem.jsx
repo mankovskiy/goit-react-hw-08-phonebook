@@ -3,21 +3,19 @@ import { useDispatch } from 'react-redux';
 // import BeatLoader from 'react-spinners/BeatLoader';
 import PropTypes from 'prop-types';
 import { deleteContact } from 'redux/contacts/operations';
-// import { useState } from 'react';
-import { toast } from 'react-toastify';
+import { useState } from 'react';
 import { Divider, Stack, Text, Button, Box } from '@chakra-ui/react';
 import { DeleteIcon } from '@chakra-ui/icons';
 
 import 'react-toastify/dist/ReactToastify.css';
 
 export function ContactListItem({ id, name, number }) {
-  // const [isBtnSpiner, setIsBtnSpiner] = useState(false);
+  const [isBtnSpiner, setIsBtnSpiner] = useState(false);
   const dispatch = useDispatch();
 
   const handleDeleteContact = () => {
     dispatch(deleteContact(id));
-    // setIsBtnSpiner(true);
-    toast.info(`'Delete contact: ${name} !'`);
+    setIsBtnSpiner(true);
   };
 
   // const btnSpiner = (
@@ -32,6 +30,7 @@ export function ContactListItem({ id, name, number }) {
         <Divider w="280px" borderColor="teal.300" mt={0} />
       </Stack>
       <Button
+        isLoading={isBtnSpiner}
         display="flex"
         ml={-10}
         size="sm"
@@ -40,11 +39,9 @@ export function ContactListItem({ id, name, number }) {
         aria-label="Delete contact"
         variant="outline"
         onClick={handleDeleteContact}
-        // disabled={isBtnSpiner}
       >
         <DeleteIcon />
       </Button>
-      {/* {isBtnSpiner ? btnSpiner : 'Delete'} */}
     </Box>
   );
 }

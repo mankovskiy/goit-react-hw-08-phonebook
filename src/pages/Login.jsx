@@ -34,15 +34,15 @@ export const Login = () => {
       >
         <FormLabel display="flex" mb={10} flexDirection="column">
           Email
-          <Input type="email" name="email" size="sm" variant="filled" />
+          <Input type="email" name="email" size="sm" />
         </FormLabel>
         <FormLabel ldisplay="flex" mb={10} flexDirection="column">
           Password
-          <Input type="password" name="password" size="sm" variant="filled" />
+          <Input type="password" name="password" size="sm" />
         </FormLabel>
 
-        <Button type="submit" bg="btnColor" color="white" size="sm">
-          Send
+        <Button type="submit" size="sm">
+          LogIn
         </Button>
       </FormControl>
     </Center>
