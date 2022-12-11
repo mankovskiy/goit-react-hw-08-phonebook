@@ -24,20 +24,22 @@ export const RegisterForm = () => {
       as="form"
       onSubmit={handleSubmit}
       autoComplete="off"
-      mt={-20}
-      w={320}
+      mt={36}
+      w={290}
+      ml="auto"
+      mr="auto"
     >
       <FormLabel mb={10}>
         Username
-        <Input type="text" name="name" size="sm" />
+        <Input type="text" name="name" size="sm" borderRadius="xl" />
       </FormLabel>
       <FormLabel mb={10}>
         Email
-        <Input type="email" name="email" size="sm" />
+        <Input type="email" name="email" size="sm" borderRadius="xl" />
       </FormLabel>
       <FormLabel mb={10}>
         Password
-        <Input type="password" name="password" size="sm" />
+        <Input type="password" name="password" size="sm" borderRadius="xl" />
       </FormLabel>
 
       <Button type="submit" size="sm">

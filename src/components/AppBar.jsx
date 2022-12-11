@@ -17,7 +17,6 @@ export const AppBar = () => {
         justifyContent="space-between"
       >
         <Navigation />
-        {/* <ColorModeSwitcher /> */}
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
       </Flex>
     </>

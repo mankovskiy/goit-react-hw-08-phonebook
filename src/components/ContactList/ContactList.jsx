@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { ContactListItem } from '../ContactListItem/ContactListItem';
 // import { List } from './ContactList.styled';
-
+import { Box } from '@chakra-ui/react';
 import {
   selectContacts,
   selectFilter,
@@ -23,7 +23,7 @@ export const ContactList = () => {
   return error ? (
     <b>no network</b>
   ) : (
-    <>
+    <Box>
       {contacts.length === 0 && (
         <Text fontSize="lg">Contact list is empty</Text>
       )}
@@ -36,7 +36,7 @@ export const ContactList = () => {
           );
         })}
       </List>
-    </>
+    </Box>
   );
 };
 

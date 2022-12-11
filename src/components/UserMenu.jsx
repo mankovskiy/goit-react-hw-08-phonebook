@@ -14,7 +14,7 @@ export const UserMenu = () => {
 
   return (
     <Flex alignItems="center">
-      <Text fontSize="xl" as="p" mr={5}>
+      <Text fontSize="xl" as="p" mr={2}>
         Welcome, {user.name}
       </Text>
       <Button

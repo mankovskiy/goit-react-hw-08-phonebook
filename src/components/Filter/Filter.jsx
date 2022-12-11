@@ -11,12 +11,11 @@ export const Filter = () => {
     dispatch(setFilterValue(value));
   };
   return (
-    <Box>
+    <Box w={{ md: 320 }}>
       <FormLabel>Find contacts by name</FormLabel>
       <Input
-        mb="40px"
         borderRadius="xl"
-        w={320}
+        mb={6}
         type="text"
         placeholder="Search name"
         size="sm"

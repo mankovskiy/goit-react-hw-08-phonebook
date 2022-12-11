@@ -14,19 +14,27 @@ export const Contacts = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <Box display="flex" gap={300} justifyContent="center" mt={20}>
-      <Box w={320}>
+    <Box
+      display={{ md: 'flex' }}
+      gap={150}
+      justifyContent="center"
+      mt={{ base: 6, md: 20 }}
+      pb={16}
+      ml="auto"
+      mr="auto"
+    >
+      <Box w={{ md: 320 }}>
         <ContactForm />
       </Box>
       <Box>
         <Filter />
         <Box
+          w={{ md: 320 }}
           backgroundColor="#EDF2F5"
           overflow="auto"
-          w={320}
           h={320}
-          minH="32px"
-          p={[2, 2, 16, 2]}
+          // minH="32px"
+          p={4}
           mt={6}
           borderRadius="xl"
         >

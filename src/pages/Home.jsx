@@ -12,7 +12,7 @@ export const Home = () => {
         as="h1"
         bgGradient="linear(to-l, #3a3fdc, #dbee33)"
         bgClip="text"
-        fontSize="6xl"
+        fontSize={{ sm: '4xl', md: '6xl' }}
         fontWeight="extrabold"
         mt={60}
       >

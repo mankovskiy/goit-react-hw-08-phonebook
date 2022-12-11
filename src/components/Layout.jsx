@@ -7,7 +7,7 @@ import { Divider } from '@chakra-ui/react';
 export const Layout = () => {
   return (
     <>
-      <Container maxW="container.xxl">
+      <Container ml="auto" mr="auto" maxW="container.xxl">
         <AppBar />
 
         <Divider />
